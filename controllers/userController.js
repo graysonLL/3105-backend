@@ -46,4 +46,14 @@ const login = (req, res) => {
   });
 };
 
-module.exports = { register, login };
+const profile = (req, res) => {
+  const userId = req.params.userId || req.user?.id;
+
+  const user = users.find((u) => u.id === parseInt(userId, 10));
+
+  if (!user) return res.status(404).send("User not found.");
+
+  res.send(user);
+};
+
+module.exports = { register, login, profile };
