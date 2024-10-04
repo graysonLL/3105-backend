@@ -1,0 +1,24 @@
+{
+  "name": "3105-backend",
+  "version": "1.0.0",
+  "description": "design and implement a basic backend application using Node.js and Express.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/graysonLL/3105-backend.git"
+  },
+  "author": "graysonLL",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/graysonLL/3105-backend/issues"
+  },
+  "homepage": "https://github.com/graysonLL/3105-backend#readme",
+  "dependencies": {
+    "bash": "^0.0.1",
+    "body-parser": "^1.20.3",
+    "express": "^4.21.0"
+  }
+}
