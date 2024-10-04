@@ -29,4 +29,21 @@ const register = (req, res) => {
   res.status(201).send("User registered successfully");
 };
 
-module.exports = { register };
+const login = (req, res) => {
+  const { email, password } = req.body;
+
+  if (!email || !password) {
+    return res.status(400).send("Email and password are required.");
+  }
+
+  const user = users.find((u) => u.email === email && u.password === password);
+  if (!user) return res.status(400).send("Invalid credentials.");
+
+  res.send({
+    message: "Login successful",
+    userId: user.id,
+    username: user.username,
+  });
+};
+
+module.exports = { register, login };
